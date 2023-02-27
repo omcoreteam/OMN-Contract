@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "module": "commonjs",
+    "strict": false,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "outDir": "dist"
+    //    "typeRoots": ["./typechain", "./node_modules/@types"],
+    //    "types": ["@nomiclabs/hardhat-ethers", "@nomiclabs/hardhat-waffle"]
+  },
+  "include": ["./test"],
+  "files": [
+    "./hardhat.config.ts",
+    "node_modules/@typechain/truffle-v5/static/types.d.ts"
+  ]
+}
