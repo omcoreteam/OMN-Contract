@@ -1,25 +1,24 @@
-# Sample Hardhat Project
+# OMN Smart Contracts 🚀
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+> This repository contains the core smart contracts used by the OMN crypto project.
 
-Try running some of the following tasks:
+## Deployment
 
 ```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.ts
-```
-
-```remix
-npm install -g @remix-project/remixd
-remixd -s ./ --remix-ide https://remix.ethereum.org
-```
-
-```deploy
 npx hardhat compile
 npx hardhat --network bsc_mainnet deploy-treasury-and-token
 npx hardhat --network bsc_mainnet deploy-ifo-sale-contract
+npx hardhat --network bsc_mainnet deploy-private-sale-contract
+npx hardhat --network bsc_mainnet deploy-ido-sale-contract
 npx hardhat --network bsc_mainnet setup
 ```
+
+## Included Smart Contracts
+
+| Sourcefile                                               | Description |
+|----------------------------------------------------------|---|
+| [OMNToken.sol](contracts/OMNToken.sol) | This is a Solidity smart contract that represents the OMN token. The OMN token is a capped ERC20 token that can be minted and burned.
+| [Treasury.sol](contracts/Treasury.sol) | This is a simple Solidity smart contract that manages a token resource and access rights to mint a specific type of token.
+| [IFOSale.sol](contracts/IFOSale.sol) | This is a Solidity smart contract that manages the token sale in the IFO round.
+| [PrivateSale.sol](contracts/PrivateSale.sol) | This is a Solidity smart contract that manages the token sale in the Private round.
+| [IDOSale.sol](contracts/IDOSale.sol) | This is a Solidity smart contract that manages the token sale in the IDO round.
